@@ -29,9 +29,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="config\db.js">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="config\db.js" />
     <Compile Include="js\boardPaging.js">
       <SubType>Code</SubType>
     </Compile>
