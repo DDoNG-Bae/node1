@@ -1,4 +1,5 @@
 */config/db.js
+*/config/sequelize.json
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
