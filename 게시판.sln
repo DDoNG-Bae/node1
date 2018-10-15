@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "게시판", "게시판\게시판.njsproj", "{A9605D83-B63C-4862-989B-0502DEDEED73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9605D83-B63C-4862-989B-0502DEDEED73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9605D83-B63C-4862-989B-0502DEDEED73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9605D83-B63C-4862-989B-0502DEDEED73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9605D83-B63C-4862-989B-0502DEDEED73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DB9220C-DCA1-4F2A-B393-B06057282B21}
+	EndGlobalSection
+EndGlobal

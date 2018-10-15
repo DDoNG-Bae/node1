@@ -1,0 +1,19 @@
+﻿extends layout
+
+block scripts
+
+block content
+    table
+        tbody
+            tr
+                td 이름
+                td
+                    p= topics[0]._name
+            tr
+                td 제목
+                td  
+                    p= topics[0]._title
+            tr
+                td
+                    != topics[0]._content
+    a(href='/board/' + topics[0]._id + '/modify') 수정

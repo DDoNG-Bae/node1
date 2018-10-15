@@ -1,0 +1,27 @@
+﻿extends layout
+
+block scripts
+    script(src='https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js')
+
+block content
+    form(actoin = '/board/write',method = 'post') 
+        table
+            tbody
+                tr
+                    td 이름
+                    td
+                        input(type='text',name = 'name', size='50')
+                tr
+                    td 제목
+                    td
+                        input(type='text',name = 'title', size = '50')
+                tr
+                    td(colspan='2')
+                        textarea#editor(name='content')
+        input(type='submit')
+    script.
+            ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+            console.error( error );
+            } );

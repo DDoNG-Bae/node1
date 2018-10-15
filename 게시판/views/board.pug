@@ -1,0 +1,48 @@
+﻿extends layout
+
+block scripts
+    script(src='javascripts/dateParse.js')
+block content
+    div
+        table.table.table-striped.table-hover
+            // width="500" cellpadding="0" cellspacing="0" border="1"
+            tbody
+                tr
+                    th 번호
+                    th 제목
+                    th 글쓴이
+                    th 날짜
+                    th 히트
+                each topic in topics
+                    tr
+                        td 
+                            p= topic._id
+                        td 
+                            a(href='/board/'+topic._id)= topic._title
+                        td 
+                            p #{topic._name}
+                        td 
+                            script.
+                                var d = dateParse('#{topic._date}')
+                                document.write(d);
+                        td 
+                            p= topic._hit
+                tr
+                    td(colspan='5')
+                        a.btn.btn-success(href='/board/write') 글작성
+    div.row
+        div.col-md-12.text-center
+            ul.pagination
+                li.previous.page-item(class={disabled: page.curSet<=1})
+                    -var preSet = page.curSet*2-3
+                    a.page-link(href='/board?page='+preSet) previous
+                -for(var i = page.startPage; i<=page.endPage; i++)
+                    if(i>page.totalPage)
+                       - break
+                    li.page-item 
+                        a.page-link(href='/board?page='+i) #{i}
+                li.next.page-item(class ={disabled: page.curSet>=page.totalSet})
+                    -var nextSet = page.curSet*2+1
+                    a.page-link(href='/board?page='+nextSet) next
+    p#demo
+        #{JSON.stringify(page)}
